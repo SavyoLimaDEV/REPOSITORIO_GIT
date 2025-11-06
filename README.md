@@ -23,7 +23,7 @@ Aprender e praticar os principais comandos e fluxos de trabalho do Git, incluind
 ---
 
 ## Autor
-**Savyo lima*  
+*Savyo lima*  
 Estudante de **Análise e Desenvolvimento de Sistemas (ADS)** — UniCesumar  
 > "Controlar versões é controlar o futuro do seu código."
 
