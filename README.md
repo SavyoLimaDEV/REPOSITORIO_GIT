@@ -1,33 +1,27 @@
-#  Aulas de Git e GitHub
 
-Este repositório foi criado para armazenar exercícios, anotações e práticas da disciplina de **Controle de Versão** utilizando **Git e GitHub**.
+# UniCesumar – Curso de Análise e Desenvolvimento de Sistemas  
+## Atividade de Extensão: Desenvolvimento + Git  
+### Projeto: NasceEmpreendedor
 
----
+### Integrantes:  
 
-## Objetivo
-Aprender e praticar os principais comandos e fluxos de trabalho do Git, incluindo:
-- Criação de repositórios
-- Commits e histórico de versões
-- Branches e merges
-- Clonagem e push/pull
-- Colaboração no GitHub
-
----
-
-## Tecnologias Utilizadas
-- Git
-- GitHub
-- Visual Studio Code
-- Terminal (Git Bash)
+- Integrante 1 (Líder) : Savyo Lima Paixão  
+- Integrante 2: Veridiana Militao  
+- Integrante 3: Francisco Sanches Marques  
+- Integrante 4: Silvia de Oliveira Fabro  
+- Integrante 5: Leonardo Mozart  
 
 ---
 
-## Autor
-*Savyo lima*  
-Estudante de **Análise e Desenvolvimento de Sistemas (ADS)** — UniCesumar  
-> "Controlar versões é controlar o futuro do seu código."
+### Tecnologias Utilizadas
+- Back-End: PHP  
 
 ---
 
-##  Status do Projeto
-Em andamento — Repositório criado para práticas e aprendizado contínuo.
+### Tipo de Licença
+- Uso livre  
+
+---
+
+### Descrição do Projeto
+Aplicativo web que auxilia empreendedores no planejamento financeiro e estratégico para abertura de empresas, oferecendo ferramentas de cálculo, projeção e análise de viabilidade econômica.
