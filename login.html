@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NasceEmpreendedor</title>
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+
+<div class="container">
+
+    
+
+    <!-- LADO ESQUERDO -->
+    <div class="left">
+
+        <div class="logo">
+        <!-- Linha 1 -->
+        <span class="clone">NASCE</span>
+        <span>NASCE</span>
+
+        <!-- Linha 2 -->
+        <span class="clone" style="top:43px;">EMPREENDEDOR</span>
+        <span style="margin-top:5px;">EMPREENDEDOR</span>
+
+        </div>
+
+       <div class="bv">
+        
+        <p>Bem-vindo!</p>
+
+        <p>Acesse sua conta para continuar.</p>
+
+       </div>
+        
+       
+    </div>
+
+   
+
+    <!-- LADO DIREITO -->
+    <div class="right">
+        <h2>Login</h2>
+        <p style="text-align:center;color:#444;">Preencha seus dados</p>
+
+        <div class="input-group">
+            <input type="text" id="usuario" placeholder="Usuário: admin">
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="senha" placeholder="Senha: admin">
+        </div>
+
+        <button class="btn" onclick="logar()">ENTRAR</button>
+
+        <p id="erro" class="erro"></p>
+    </div>
+
+</div>
+
+
+<script>
+
+    function logar(){
+        let user = document.getElementById("usuario").value;
+        let pass = document.getElementById("senha").value;
+        let erro = document.getElementById("erro");
+
+        if(user === "admin" && pass === "admin"){
+        
+            window.location.href = "home.html";
+        } else {
+            erro.textContent = "Usuário ou senha incorretos!";
+        }
+    }
+</script>
+
+</body>
+</html>

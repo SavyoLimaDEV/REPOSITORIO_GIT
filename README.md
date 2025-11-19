@@ -14,6 +14,7 @@
 ---
 
 ### Tecnologias Utilizadas
+- front html / css / java-script
 - Back-End: PHP  
 
 ---

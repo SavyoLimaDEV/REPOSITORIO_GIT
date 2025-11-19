@@ -1,0 +1,208 @@
+
+ /* ------------------------------
+       ESTILO DA PÁGINA
+    --------------------------------*/
+
+    
+    :root {
+      font-family: "Inter", Arial, sans-serif;
+      color-scheme: light dark;
+    }
+
+    body {
+      margin: 20px;
+      background: #dadada;
+      color: #121827;
+      line-height: 2.5;
+    }
+
+    /* ------------------------------
+       CONTAINER PRINCIPAL
+    --------------------------------*/
+    .interface {
+      font-size: 1.5rem;
+      width: 1250px;
+      margin: 9rem auto;
+      padding: 1rem;
+    }
+    .titulo { 
+      font-size: 1.5rem;
+      width: 1000;
+      margin-left: calc(50% - 50vw); /* truque para quebrar container*/
+      margin-right: calc(50% - 50vw );
+      background: #000000;
+      color: #ffffff;
+      padding: 1rem;
+      border-radius: 0;  /* se quiser quadrado nas laterais */
+      box-shadow: 0 6px 18px rgba(15, 23, 42, .06);
+    }
+
+    .navbar {
+      background: #5a595981;
+      border-radius: 15px;
+      display: flex;
+      gap: 1rem;            
+      margin-top: 1rem;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+    
+    .nasce h1 {
+      margin: 0.5rem;
+      padding: 1rem;
+    }
+
+    .logout {
+    font-weight: bold;  
+    text-decoration: none;
+    position: absolute;
+    top: 20px;       /* distância do topo */
+    right: 20px;      /* distância da esquerda */
+    
+    
+    background: #050505;
+    color: #080808;
+    padding: 0.7rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+    }
+
+    a {
+      color: #3b32b6; /* cor normal do link (preta, troque se quiser) */
+      text-decoration: none; /* tira o sublinhado */
+    }
+
+    a:visited {
+          color: #ffffff; /* mesma cor do link normal */
+    }
+
+    a:hover {
+          color: #555; /* cor quando passa o mouse (opcional) */
+    }
+
+
+
+    
+
+
+    /* ------------------------------
+       HEADER
+    --------------------------------*/
+
+    header {
+      
+      display: flex;
+      flex-direction: column; /* título em cima, nav embaixo */
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+
+    header h1 {
+      
+      text-align: center;
+      margin: 0;
+      padding: 1rem 0; 
+      font-size: 4rem;
+    }
+
+    nav a {
+    text-decoration: none;
+    color: #ffffff;
+    opacity: .9;
+    margin-left: 1.5rem;
+    margin-right: 0.5rem;
+    }
+
+
+    /* ------------------------------
+       CARDS E LAYOUT
+    --------------------------------*/
+    main {
+      margin-top: 5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 4rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, .06);
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: 1
+      2fr 1fr;
+    }
+
+    /* ------------------------------
+       FORMULÁRIOS
+    --------------------------------*/
+
+    .campo {
+      background: #ffffff;
+      font-weight: bold;            
+      padding: 1rem;                  
+      border-radius: 1px;            
+      box-shadow: 0 4px 12px rgba(24, 24, 24, 0.08); 
+      border: 1px solid #e4e4e4;      
+    }
+
+
+    label {
+      display: block;
+      margin-bottom: .25rem;
+      font-size: .9rem;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: .5rem;
+      border: 1px solid #e6e9ef;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: .6rem .9rem;
+      border-radius: 10px;
+      border: 0;
+      background: #0b69ff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    /* ------------------------------
+       FOOTER
+    --------------------------------*/
+    footer {
+      margin-top: 1.5rem;
+      text-align: center;
+      color: #8c9fb3;
+      font-size: .9rem;
+    }
+
+    /* ------------------------------
+       RESPONSIVO
+    --------------------------------*/
+    @media (max-width: 700px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  
