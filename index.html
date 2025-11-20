@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - NasceEmpreendedor</title>
-    <link rel="stylesheet" href="login.css">
-    
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>repositoriogit</title>
+    <link rel="stylesheet" href="src/login.css">
 
-<div class="container">
+
+  </head>
+  <body>
+    <div class="container">
 
     
 
@@ -58,24 +59,30 @@
         <p id="erro" class="erro"></p>
     </div>
 
-</div>
+  </div>
 
 
-<script>
+    <script>
 
-    function logar(){
-        let user = document.getElementById("usuario").value;
-        let pass = document.getElementById("senha").value;
-        let erro = document.getElementById("erro");
+      function logar(){
+          let user = document.getElementById("usuario").value;
+          let pass = document.getElementById("senha").value;
+          let erro = document.getElementById("erro");
 
-        if(user === "admin" && pass === "admin"){
-        
-            window.location.href = "home.html";
-        } else {
-            erro.textContent = "Usuário ou senha incorretos!";
-        }
-    }
-</script>
+          if(user === "admin" && pass === "admin"){
+          
+              window.location.href = "home.html";
+          } else {
+              erro.textContent = "Usuário ou senha incorretos!";
+          }
+      }
+    </script>
 
-</body>
+
+
+
+
+
+  
+  </body>
 </html>
