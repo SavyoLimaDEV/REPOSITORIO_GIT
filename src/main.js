@@ -1,18 +1,10 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NasceEmpreendedor — Plano 12 meses</title>
-  <link rel="stylesheet" href="src/home.css">
+import './style.css'
+import javascriptLogo from './javascript.svg'
+import viteLogo from '/vite.svg'
+import { setupCounter } from './counter.js'
 
-  <meta name="description"
-    content="Aplicativo para ajudar novos empreendedores a planejar custos, capital de giro e lucro num plano de 12 meses." />
-
-  
-</head>
-
-<body>
+document.querySelector('#app').innerHTML = 
+`
   <div class="interface">
 
     <!-- -------------------------------------------------------
@@ -113,13 +105,6 @@
 
 
 
-
-
-
-
-
-     
-
        <!----------------------------------------COLETA DE DADOS---------------------------------  -------------------------------------------------------------------------------------------------------------------->
 
 
@@ -181,8 +166,6 @@
 
 
 
-
-
           <!-- Linha 3 -->
           <div class="campo"><label for="prazoProduto">Validade do produto</label></div>
 
@@ -200,12 +183,6 @@
           </button>
 
         </form>
-
-
-
-
-
-
 
 
         
@@ -242,6 +219,8 @@
       </section>
 
 
+
+
       <!-- Próximos passos -->
 
       <section class="card">
@@ -261,8 +240,9 @@
 
       <section id="contato" class="card">
         <h3>Contato</h3>
-        <p> Para sugestões ou feedback, envie um e-mail para: <div class="email"><a href="mailto:savyol14@gmail.com">savyol14@gmail.com</a></div>
-         
+        <p> Para sugestões ou feedback, envie um e-mail para
+          <a href="mailto:savyol14@gmail.com">savyol14@gmail.com</a>
+         .
         </p>
       </section>
 
@@ -273,6 +253,22 @@
       © <span id="ano"></span> NasceEmpreendedor — Protótipo
     </footer>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    <!-----------------------------------------------------------------SCRIPT---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -318,10 +314,7 @@
 
     }
   </script>
+  </div>
+`
 
-
-
-
-
-</body>
-</html>
+setupCounter(document.querySelector('#counter'))
