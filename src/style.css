@@ -276,9 +276,22 @@
     /* ------------------------------
        RESPONSIVO
     --------------------------------*/
-    @media (max-width: 700px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
+    @media (max-width: 1200px) {
+      .interface {
+        margin: 3rem auto;
+     }
+    }
+
+    @media (max-width: 900px) {
+      header h1 {
+        font-size: 2.8rem;
       }
     }
+
+    @media (max-width: 600px) {
+      .card {
+       padding: 2rem;
+      }
+    }
+
   
