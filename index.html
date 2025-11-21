@@ -127,25 +127,25 @@
 
             <div>
               <div class="campo"><label for="aluguel">Aluguel / local (mensal)</label></div>
-              <input id="aluguel" type="number" min="0" step="0.01" value="0" />
+              <input id="aluguel" type="number" min="0" step="0.01" value=" " />
             </div>
 
 
             <div>
               <div class="campo"><label for="dominio">Domínio (mensal)</label></div>
-              <input id="dominio" type="number" min="0" step="0.01" value="0" />
+              <input id="dominio" type="number" min="0" step="0.01" value=" " />
             </div>
 
 
             <div>
               <div class="campo"><label for="servidor">Servidor / hospedagem (mensal)</label></div>
-              <input id="servidor" type="number" min="0" step="0.01" value="0" />
+              <input id="servidor" type="number" min="0" step="0.01" value=" " />
             </div>
 
 
             <div>
               <div class="campo"><label for="outros">Outros custos (mensal)</label></div>
-              <input id="outros" type="number" min="0" step="0.01" value="0" />
+              <input id="outros" type="number" min="0" step="0.01" value=" " />
             </div>
 
           </div>
@@ -160,12 +160,12 @@
 
             <div>
               <div class="campo"><label for="estoque">Valor do estoque inicial (R$)</label></div>
-              <input id="estoque" type="number" min="0" step="0.01" value="0" />
+              <input id="estoque" type="number" min="0" step="0.01" value=" " />
             </div>
 
             <div>
               <div class="campo"><label for="vendaMensal">Estimativa de receita mensal (R$)</label></div>
-              <input id="vendaMensal" type="number" min="0" step="0.01" value="0" />
+              <input id="vendaMensal" type="number" min="0" step="0.01" value=" " />
             </div>
 
           </div>
@@ -188,6 +188,10 @@
 
           <button type="button" onclick="calcularPlano()">
             Calcular plano de 12 meses
+          </button>
+
+          <button type="button" onclick="limparCampos()">
+            Limpar campos
           </button>
 
         </form>
@@ -285,14 +289,14 @@
 
     /* Lógica da calculadora */
 
-    function calcularPlano() {
+  function calcularPlano() {
 
-      const aluguel = Number(document.getElementById('aluguel').value) || 0;
-      const dominio = Number(document.getElementById('dominio').value) || 0;
-      const servidor = Number(document.getElementById('servidor').value) || 0;
-      const outros = Number(document.getElementById('outros').value) || 0;
-      const estoque = Number(document.getElementById('estoque').value) || 0;
-      const vendaMensal = Number(document.getElementById('vendaMensal').value) || 0;
+      const aluguel = Number(document.getElementById('aluguel').value);
+      const dominio = Number(document.getElementById('dominio').value);
+      const servidor = Number(document.getElementById('servidor').value);
+      const outros = Number(document.getElementById('outros').value);
+      const estoque = Number(document.getElementById('estoque').value);
+      const vendaMensal = Number(document.getElementById('vendaMensal').value);
 
       const meses = 12;
 
@@ -311,6 +315,32 @@
       document.getElementById('receitaProj').textContent = formatBRL(receitaAnual);
       document.getElementById('capitalFinal').textContent = formatBRL(capitalFinal);
 
+    }
+
+    function limparCampos() {
+
+        // Limpa todos os inputs do tipo text, number, email, etc
+        const inputs = document.querySelectorAll('input[type="text"], input[type="number"], input[type="email"], input[type="tel"]');
+
+        inputs.forEach(input => {
+          input.value = '';
+        });
+        
+        // Limpa textareas se tiver
+        const textareas = document.querySelectorAll('textarea');
+
+        textareas.forEach(textarea => {
+          textarea.value = '';
+        });
+        
+        // Limpa selects se tiver
+        const selects = document.querySelectorAll('select');
+
+        selects.forEach(select => {
+          select.selectedIndex =  0;
+        });
+        
+        
     }
   </script>
   </div>
