@@ -28,7 +28,7 @@
     }
     .titulo { 
       font-size: 1.5rem;
-      width: 1000;
+      width: 1000px;
       margin-left: calc(50% - 50vw); /* truque para quebrar container*/
       margin-right: calc(50% - 50vw );
       background: #000000;
@@ -62,7 +62,7 @@
     
     
     background: #050505;
-    color: #080808;
+    color: #ffffff;
     padding: 0.7rem 1.2rem;
     border-radius: 10px;
     cursor: pointer;
