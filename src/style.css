@@ -174,11 +174,13 @@
     }
 
     button {
-      padding: .6rem .9rem;
+      padding: 10px 450px;
       border-radius: 10px;
       border: 0;
       background: #0b69ff;
-      color: #fff;
+      font-weight: bold;
+      font-size: 25px;
+      color: #ffffff;
       cursor: pointer;
     }
 
