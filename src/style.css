@@ -53,7 +53,7 @@
       padding: 1rem;
     }
 
-    .logout {
+    .logout a {
     font-weight: bold;  
     text-decoration: none;
     position: absolute;
@@ -76,7 +76,7 @@
     }
 
     a:visited {
-          color: #ffffff; /* mesma cor do link normal */
+          color: #3b32b6; /* mesma cor do link normal */
     }
 
     a:hover {
