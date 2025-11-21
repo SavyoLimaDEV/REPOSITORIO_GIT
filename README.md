@@ -27,4 +27,3 @@
 ### Descrição do Projeto
 Aplicativo web que auxilia empreendedores no planejamento financeiro e estratégico para abertura de empresas, oferecendo ferramentas de cálculo, projeção e análise de viabilidade econômica. 
 
-ola
