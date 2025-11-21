@@ -175,7 +175,7 @@
 
           button {
         position: relative;
-        padding: 18px 420px;
+        padding: 18px 60px;
         border-radius: 15px;
         border: none;
         background: linear-gradient(135deg, #0b69ff 0%, #0052cc 100%);
@@ -217,13 +217,12 @@
       }
 
       button::after {
+      
         content: '';
         position: absolute;
         inset: 0;
         border-radius: 20px;
         padding: 5px;
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#f1ebeb 0 0);
-        -webkit-mask-composite: xor;
         mask-composite: exclude;
         opacity: 0;
         transition: opacity 0.4s;
