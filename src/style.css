@@ -26,17 +26,16 @@
       margin: 9rem auto;
       padding: 1rem;
     }
-    .titulo { 
+
+     .titulo { 
       font-size: 1.5rem;
-      width: 100vw; /* MUDEI AQUI: De 1000px para 100vw (largura total da tela) */
-      margin-left: calc(50% - 50vw); 
+      width: 1000px;
+      margin-left: calc(50% - 50vw); /* truque para quebrar container*/
       margin-right: calc(50% - 50vw );
       background: #000000;
       color: #ffffff;
-      padding: 1rem 0; /* Ajustei para centralizar verticalmente melhor */
-      text-align: center; /* ADICIONEI AQUI: Centraliza o texto no meio da barra */
-      
-      border-radius: 0;
+      padding: 1rem;
+      border-radius: 0;  /* se quiser quadrado nas laterais */
       box-shadow: 0 6px 18px rgba(15, 23, 42, .06);
     }
 
