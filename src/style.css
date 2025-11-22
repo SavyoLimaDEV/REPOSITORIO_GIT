@@ -39,7 +39,7 @@
     }
 
     .navbar {
-      background: #0b039b81; /* troquei para um azul escuro */
+      background: #e0e0e081; /* troquei para um azul escuro */
       border-radius: 15px;
       display: flex;
       gap: 1rem;            
@@ -71,16 +71,16 @@
     }
 
     a {
-      color: #3b32b6; /* cor normal do link (preta, troque se quiser) */
+      color: #ffffff; /* cor normal do link (preta, troque se quiser) */
       text-decoration: none; /* tira o sublinhado */
     }
 
     a:visited {
-          color: #3b32b6; /* mesma cor do link normal */
+          color: #f3f3f3; /* mesma cor do link normal */
     }
 
     a:hover {
-          color: #555; /* cor quando passa o mouse (opcional) */
+          color: #fffefe; /* cor quando passa o mouse (opcional) */
     }
 
 
