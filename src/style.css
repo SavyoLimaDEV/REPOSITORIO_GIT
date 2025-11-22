@@ -28,7 +28,7 @@
     }
      .titulo { 
       font-size: 1.5rem;
-      width: 1000px;
+      width: 100vw; /* largura total da tela */
       margin-left: calc(50% - 50vw); /* truque para quebrar container*/
       margin-right: calc(50% - 50vw );
       background: #000000;
