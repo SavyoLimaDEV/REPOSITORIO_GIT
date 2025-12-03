@@ -26,10 +26,10 @@
       margin: 9rem auto;
       padding: 1rem;
     }
-     .titulo { 
+    .titulo { 
       font-size: 1.5rem;
-      width: 100vw; /* largura total da tela */
-      margin-left: calc(50% - 50vw); /* truque para quebrar container*/
+      width: 100vw; /* MUDEI AQUI: De 1000px para 100vw (largura total da tela) */
+      margin-left: calc(50% - 50vw); 
       margin-right: calc(50% - 50vw );
       background: #000000;
       color: #ffffff;
