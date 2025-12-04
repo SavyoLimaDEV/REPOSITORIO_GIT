@@ -1,349 +1,240 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>repositoriogit</title>
+    <title>NasceEmpreendedor</title>
     <link rel="stylesheet" href="src/style.css" />
-  </head>
-  <body>
+    <script type="module" src="src/main.js" defer></script>
 
-    <div class="interface">
-
-    <!-- -------------------------------------------------------
-         CABEÇALHO
-    ----------------------------------------------------------- -->
-    <div class="titulo"> 
-
-      <header>
+</head>
 
 
-        <div class="nasce"><h1>NasceEmpreendedor</h1></div>   
-        
-        
+</body>
 
-          
-           <div class="navbar">
-              <nav aria-label="Menu principal">
-
-              <a href="#sobre">Sobre</a>
-              <a href="#calculadora">Calculadora</a>
-              <a href="#contato">Contato</a>
-              
-              </nav>
-
-
-              
-            </div>
-            
-        
-            
-
-    </header>
-
-
+     <div class="logo">
+        <img src="/logo.png" alt="Nasce um Empreendedor" id="logoImg">
     </div>
-     
-
-
-
-
-
-    <!-- -------------------------------------------------------
-         CONTEÚDO PRINCIPAL
-    ----------------------------------------------------------- -->
-    <main>
-
-      <!-- Introdução -->
-      <section id="sobre" class="card">
-
-        <h2>Ajude pessoas a iniciar seu empreendimento</h2>
-
-        <p>
-          Estruturarem a abertura do seu negócio por meio de um planejamento financeiro simples, claro e direto. Sabemos que grande parte das dificuldades enfrentadas no início especialmente por MEIs e jovens empreendedores, vem da falta de conhecimento sobre custos reais, fluxo de caixa e organização dos primeiros meses de operação.
-          <br><br>
-
-          Muitos negócios fecham não por falta de clientes, mas porque o empreendedor não consegue prever despesas fixas, calcular o capital de giro, organizar o estoque inicial, planejar investimentos ou entender quanto realmente precisa faturar para se manter ativo. Além disso, é comum surgirem dúvidas como:
-          <br><br>
-
-          Quanto custa manter o negócio aberto por 12 meses?<br>
-
-        
-
-          Quanto devo separar para capital de giro?<br>
-
-          Como calcular lucro de forma correta?<br>
-
-          Como prever a sazonalidade e períodos de baixa?<br>
-
-          Quanto preciso vender mensalmente para não ter prejuízo?<br><br>
-
-          Pensando nisso, este aplicativo reúne essas informações em um único lugar, fornecendo cálculos automáticos e orientações práticas para que o empreendedor visualize, de forma clara, todo o planejamento financeiro dos primeiros 12 meses. Assim, ele pode tomar decisões mais seguras, evitar dívidas desnecessárias e começar o negócio com uma base sólida.<br><br>
-
-          Nosso objetivo é apoiar o MEI, o pequeno e o jovem empreendedor que está iniciando sua jornada  oferecendo uma ferramenta simples, acessível e feita para quem realmente precisa entender o que acontece “por trás” do negócio, antes mesmo de abrir as portas.<br>
-        </p>
-
-      </section>
-
-
-
-
-      <!-------------------- Funcionalidades -->
-      <section class="card">
-
-        <h3>Funcionalidades principais</h3>
-
-        <ul>
-
-          <li>Calcular custos mensais e total para 12 meses</li>
-          <li>Estimativa de capital de giro e lucro</li>
-          <li>Registro de estoque inicial e validade (curto/longa duração)</li>
-          <li>Exportar relatório (próximos passos: CSV/PDF)</li>
-
-        </ul>
-
-      </section>
-
-
-
-       <!----------------------------------------COLETA DE DADOS---------------------------------  -------------------------------------------------------------------------------------------------------------------->
-
-
-      <section id="calculadora" class="card">
-
-        <h3>Calculadora: Plano de 12 meses</h3>
-
-        <form id="planForm" onsubmit="return false;">
-
-          <!-- Linha 1 -->
-          <div class="grid grid-2">
-
-            <div>
-              <div class="campo"><label for="aluguel">Aluguel / local (mensal)</label></div>
-              <input id="aluguel" type="number" min="0" step="0.01" value=" " />
-            </div>
-
-
-            <div>
-              <div class="campo"><label for="dominio">Domínio (mensal)</label></div>
-              <input id="dominio" type="number" min="0" step="0.01" value=" " />
-            </div>
-
-
-            <div>
-              <div class="campo"><label for="servidor">Servidor / hospedagem (mensal)</label></div>
-              <input id="servidor" type="number" min="0" step="0.01" value=" " />
-            </div>
-
-
-            <div>
-              <div class="campo"><label for="outros">Outros custos (mensal)</label></div>
-              <input id="outros" type="number" min="0" step="0.01" value=" " />
-            </div>
-
-          </div>
-
-
-          <div style="height: .5rem;"></div>
-
-
-
-          <!-- Linha 2 -->
-          <div class="grid grid-2">
-
-            <div>
-              <div class="campo"><label for="estoque">Valor do estoque inicial (R$)</label></div>
-              <input id="estoque" type="number" min="0" step="0.01" value=" " />
-            </div>
-
-            <div>
-              <div class="campo"><label for="vendaMensal">Estimativa de receita mensal (R$)</label></div>
-              <input id="vendaMensal" type="number" min="0" step="0.01" value=" " />
-            </div>
-
-          </div>
-
-          <div style="height: .5rem;"></div>
-
-
-
-          <!-- Linha 3 -->
-          <div class="campo"><label for="prazoProduto">Validade do produto</label></div>
-
-          <select id="prazoProduto">
-            <option value="curto">Curto prazo (perecíveis)</option>
-            <option value="longo">Longo prazo (não perecíveis)</option>
-          </select>
-
-
-          <div style="height: 1rem;"></div>
-
-
-          <button type="button" onclick="calcularPlano()">
-            Calcular plano de 12 meses
-          </button>
-
-          <button type="button" onclick="limparCampos()">
-            Limpar campos
-          </button>
-
-        </form>
-
-
-        
-        <!----------------------------------------------------------RESULTADOS------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
-
-        <div id="resultado" style="margin-top: 1rem;" aria-live="polite">
-          
-          <div class="card">
-
-            <p>Custo total (12 meses):
-              <span id="custoTotal" class="result">R$ 0,00</span>
-            </p>
-
-            <p>Capital necessário (estoque + 3 meses de reserva recomendado):
-              <span id="capitalNecessario" class="result">R$ 0,00</span>
-            </p>
-
-            <p>Receita projetada (12 meses):
-              <span id="receitaProj" class="result">R$ 0,00</span>
-            </p>
-
-            <p>Capital final estimado (receita - custos):
-              <span id="capitalFinal" class="result">R$ 0,00</span>
-            </p>
-
-            <small>
-              Observação: números são estimativas; personalize as fórmulas conforme o modelo de negócio.
-            </small>
-
-          </div>
-
+ 
+  <section class="hero">
+        <div class="hero-content">
+            <h1>Nasce Empreendedor</h1>
+            <h2>Planeje seu Negócio com Segurança</H2>
+            <p>A ferramenta completa para MEIs e jovens empreendedores estruturarem os primeiros 12 meses do seu negócio com clareza e confiança</p>
+            <a href="#" class="cta-button">Comece seu Planejamento Agora</a>
         </div>
+    </section>
 
-      </section>
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-titlep">Por Que Tantos Negócios Fecham?</h2>
+            <p class="section-subtitle">A maioria dos negócios não fecha por falta de clientes, mas por falta de planejamento financeiro adequado</p>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <h3>Despesas Não Previstas</h3>
+                    <p>Muitos empreendedores não conseguem prever todos os custos fixos e variáveis, gerando surpresas desagradáveis no caixa</p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">📊</div>
+                    <h3>Capital de Giro Insuficiente</h3>
+                    <p>Sem saber quanto dinheiro separar para manter o negócio funcionando nos primeiros meses, o empreendedor fica vulnerável</p>
+                </div>
+                
+                <div class="problem-card">
+                    <div class="problem-icon">📉</div>
+                    <h3>Falta de Controle</h3>
+                    <p>Dificuldade em organizar fluxo de caixa, estoque e investimentos leva a decisões sem embasamento financeiro</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="questions">
+        <div class="container">
+            <h2 class="section-titled">Dúvidas Comuns dos Empreendedores</h2>
+            <div class="question-list">
+               <div class="question-item" data-icon="💰">Quanto custa manter o negócio aberto por 12 meses?</div>
+<div class="question-item" data-icon="💵">Quanto devo separar para capital de giro?</div>
+<div class="question-item" data-icon="📊">Como calcular lucro de forma correta?</div>
+<div class="question-item" data-icon="📉">Como prever a sazonalidade e períodos de baixa?</div>
+<div class="question-item" data-icon="📈">Quanto preciso vender mensalmente para não ter prejuízo?</div>
+            </div>
+        </div>
+    </section>
 
+    <section class="solution">
+        <div class="container">
+            <h2 class="section-titleS">A Solução para seu Planejamento</h2>
+            <p class="section-subtitle">Todas as informações financeiras que você precisa, reunidas em um único lugar</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Cálculos Automáticos</h3>
+                    <p>Sistema inteligente que calcula automaticamente todos os seus custos e projeções</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📅</div>
+                    <h3>Planejamento 12 Meses</h3>
+                    <p>Visualize todo o primeiro ano do seu negócio de forma clara e organizada</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">💡</div>
+                    <h3>Orientações Práticas</h3>
+                    <p>Dicas e orientações que ajudam você a tomar decisões mais seguras</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Simples e Acessível</h3>
+                    <p>Interface intuitiva, feita especialmente para quem está começando</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Base Sólida</h3>
+                    <p>Comece seu negócio com fundamentos financeiros corretos</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Evite Dívidas</h3>
+                    <p>Planeje-se para não cair em armadilhas financeiras comuns</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+     <section id="formulario" class="planning-form">
+        <div class="container">
+            <h2 class="section-titlem">Monte seu Planejamento Financeiro</h2>
+            <p class="section-subtitle">Preencha os dados do seu negócio para gerar uma projeção completa de 12 meses</p>
+            
+            <div class="form-container">
+                <form id="planningForm">
+                    <div class="form-section">
+                        <h3>💰 Investimento Inicial</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Capital Inicial Disponível (R$)</label>
+                                <input type="number" name="capitalInicial" placeholder="Ex: 10000" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Equipamentos e Móveis (R$)</label>
+                                <input type="number" name="equipamentos" placeholder="Ex: 5000" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Estoque Inicial (R$)</label>
+                                <input type="number" name="estoqueInicial" placeholder="Ex: 3000" required>
+                            </div>
+                        </div>
+                    </div>
 
-      <!-- Próximos passos -->
+                    <div class="form-section">
+                        <h3>📊 Custos Fixos Mensais</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Aluguel (R$)</label>
+                                <input type="number" name="aluguel" placeholder="Ex: 1500" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Água, Luz, Internet (R$)</label>
+                                <input type="number" name="contas" placeholder="Ex: 300" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Salários e Pró-labore (R$)</label>
+                                <input type="number" name="salarios" placeholder="Ex: 2000" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Outros Custos Fixos (R$)</label>
+                                <input type="number" name="outrosFixos" placeholder="Ex: 500" required>
+                            </div>
+                        </div>
+                    </div>
 
-      <section class="card">
+                    <div class="form-section">
+                        <h3>📈 Projeção de Vendas</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Faturamento Mensal Esperado (R$)</label>
+                                <input type="number" name="faturamento" placeholder="Ex: 8000" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Custo dos Produtos/Serviços (%)</label>
+                                <input type="number" name="custoProduto" placeholder="Ex: 40" max="100" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Margem de Lucro Desejada (%)</label>
+                                <input type="number" name="margemLucro" placeholder="Ex: 30" max="100" required>
+                            </div>
+                        </div>
+                    </div>
 
-        <h3>Próximos passos</h3>
+                    <button type="submit" class="calculate-btn">🚀 Calcular Meu Planejamento</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        <ol>
-          <li>Adicionar validação e mensagens de erro amigáveis.</li>
-          <li>Salvar planos no banco de dados e exportar CSV/PDF.</li>
-          <li>Adicionar autenticação para usuários e dashboard.</li>
-          <li>Criar tema responsivo com CSS .</li>
-        </ol>
+    <!-- NOVA SEÇÃO: RESULTADOS -->
+    <section id="resultados" class="results">
+        <div class="container">
+            <h2 class="section-titlesp">Seu Planejamento Financeiro</h2>
+            <p class="section-subtitle">Veja a projeção completa dos seus primeiros 12 meses</p>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <h4>Capital de Giro Necessário</h4>
+                    <div class="value" id="capitalGiro">R$ 0</div>
+                    <p>Reserva para os primeiros meses</p>
+                </div>
+                
+                <div class="result-card">
+                    <h4>Ponto de Equilíbrio</h4>
+                    <div class="value" id="pontoEquilibrio">R$ 0</div>
+                    <p>Faturamento mínimo mensal</p>
+                </div>
+                
+                <div class="result-card">
+                    <h4>Lucro Estimado (12 meses)</h4>
+                    <div class="value" id="lucroAnual">R$ 0</div>
+                    <p>Projeção total do primeiro ano</p>
+                </div>
+            </div>
 
-      </section>
+            <div class="chart-container">
+                <h3 style="margin-bottom: 20px; color: #2d3748;">📊 Fluxo de Caixa Projetado</h3>
+                <div class="chart-placeholder">
+                    Gráfico de projeção mensal será exibido aqui
+                </div>
+            </div>
 
-      <!-- Contato -->
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="cta-button" onclick="window.print()">💾 Salvar/Imprimir Planejamento</button>
+            </div>
+        </div>
+    </section>
 
-      <section id="contato" class="card">
-        <h3>Contato</h3>
-        <p> Para sugestões ou feedback, envie um e-mail para
-          <a href="mailto:savyol14@gmail.com">savyol14@gmail.com</a>
-         .
-        </p>
-      </section>
+    <section class="final-cta">
+        <div class="container">
+            <h2>Pronto para Transformar seu Sonho em Realidade?</h2>
+            <p>Não deixe seu negócio ser mais uma estatística. Comece agora com um planejamento financeiro sólido e alcance o sucesso que você merece.</p>
+            <a href="#" class="cta-button">Criar Meu Planejamento Gratuito</a>
+        </div>
+    </section>
 
-    </main>
-
-    <!-- FOOTER -->
     <footer>
-      © <span id="ano"></span> NasceEmpreendedor — Protótipo
+        <p>&copy; 2025 Planejamento Financeiro MEI. 
+            Apoiando empreendedores a construir negócios sustentáveis.</p>
     </footer>
-  </div>
 
-
-
-
-
-
-
-
-   <!-----------------------------------------------------------------SCRIPT---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-  <script>
-    /* Preenche ano */
-    document.getElementById('ano').textContent = new Date().getFullYear();
-
-    /* Moeda BRL */
-    function formatBRL(value) {
-      return value.toLocaleString('pt-BR', {
-        style: 'currency',
-        currency: 'BRL'
-      });
-    }
-
-    /* Lógica da calculadora */
-
-  function calcularPlano() {
-
-      const aluguel = Number(document.getElementById('aluguel').value);
-      const dominio = Number(document.getElementById('dominio').value);
-      const servidor = Number(document.getElementById('servidor').value);
-      const outros = Number(document.getElementById('outros').value);
-      const estoque = Number(document.getElementById('estoque').value);
-      const vendaMensal = Number(document.getElementById('vendaMensal').value);
-
-      const meses = 12;
-
-      const custoMensal = aluguel + dominio + servidor + outros;
-      const custoTotal12 = custoMensal * meses;
-
-      const receitaAnual = vendaMensal * meses;
-
-      const reserva = custoMensal * 3;
-      const capitalNecessario = estoque + reserva;
-
-      const capitalFinal = receitaAnual - custoTotal12;
-
-      document.getElementById('custoTotal').textContent = formatBRL(custoTotal12);
-      document.getElementById('capitalNecessario').textContent = formatBRL(capitalNecessario);
-      document.getElementById('receitaProj').textContent = formatBRL(receitaAnual);
-      document.getElementById('capitalFinal').textContent = formatBRL(capitalFinal);
-
-    }
-
-    function limparCampos() {
-
-        // Limpa todos os inputs do tipo text, number, email, etc
-        const inputs = document.querySelectorAll('input[type="text"], input[type="number"], input[type="email"], input[type="tel"]');
-
-        inputs.forEach(input => {
-          input.value = '';
-        });
-        
-        // Limpa textareas se tiver
-        const textareas = document.querySelectorAll('textarea');
-
-        textareas.forEach(textarea => {
-          textarea.value = '';
-        });
-        
-        // Limpa selects se tiver
-        const selects = document.querySelectorAll('select');
-
-        selects.forEach(select => {
-          select.selectedIndex =  0;
-        });
-        
-        
-    }
-  </script>
-  </div>
-
-
-    <!------------------<!<div id="app"></div>
-    <script type="module" src="/src/main.js"></script>---------------------------------------------->
-    
-
-
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
