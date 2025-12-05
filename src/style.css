@@ -106,7 +106,10 @@
       text-align: center;
       margin: 0;
       padding: 1rem 0; 
-      font-size: 4rem;
+      font-size: 4.5rem;
+      color: #ffd700; /* dourado */
+    text-shadow: 0 0 10px #00000050;
+
     }
 
     nav a {
