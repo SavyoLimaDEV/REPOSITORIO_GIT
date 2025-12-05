@@ -107,7 +107,8 @@
       
       display: flex;
       flex-direction: column; /* título em cima, nav embaixo */
-      align-items: flex-start;
+      align-items: center;
+;
       gap: 0.5rem;
     }
 
