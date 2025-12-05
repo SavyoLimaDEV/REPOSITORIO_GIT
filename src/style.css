@@ -524,3 +524,59 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- CONFIGURAÇÃO DE IMPRESSÃO (Modo Econômico) --- */
+@media print {
+    /* 1. Esconde tudo que é "propaganda" ou desnecessário no papel */
+    .logo, 
+    .hero, 
+    .problems, 
+    .questions, 
+    .solution, 
+    .final-cta, 
+    footer, 
+    .form-actions, /* Esconde os botões de calcular/limpar */
+    .cta-button {  /* Esconde o botão de imprimir/salvar */
+        display: none !important;
+    }
+
+    /* 2. Configura o fundo para economizar tinta */
+    body {
+        background: white !important;
+        color: black !important;
+        /* Linha removida para evitar erro no editor */
+    }
+
+    /* 3. Tira o fundo escuro do formulário e dos resultados */
+    .planning-form, 
+    .results,
+    .result-card, 
+    .form-container {
+        background: none !important;
+        background-color: white !important;
+        color: black !important;
+        box-shadow: none !important; /* Remove sombras */
+        padding: 0 !important;
+        margin: 20px 0 !important;
+        border: none !important;
+    }
+
+    /* 4. Ajustes de texto para leitura no papel */
+    h1, h2, h3, h4, p, label {
+        color: black !important;
+        text-shadow: none !important;
+    }
+
+    /* 5. Garante que os resultados apareçam (mesmo se estiverem ocultos na tela) */
+    .results {
+        display: block !important;
+        page-break-inside: avoid; /* Tenta não quebrar a página no meio dos resultados */
+    }
+
+    /* 6. Deixa os inputs com cara de "texto fixo" */
+    input {
+        border: 1px solid #ccc !important;
+        background: transparent !important;
+        color: black !important;
+    }
+}
