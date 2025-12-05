@@ -64,7 +64,8 @@ body {
 
 .hero h1 {
     font-size: 3.5em;
-    margin-bottom: center;
+    line-height: 4.5;
+    margin-top: -20px;
     animation: fadeInDown 1s ease;
 }
 
