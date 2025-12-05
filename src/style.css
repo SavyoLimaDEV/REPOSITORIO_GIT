@@ -189,23 +189,24 @@ body {
 }
 .problem-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 45px;
+    margin-top: 60px;
 }
 
 .problem-card {
-    background: white;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12);
     transition: all 0.3s ease;
-    border-left: 4px solid #2c5364;
+    border-left: none;
+    border-top: 4px solid #2c5364;
 }
 
 .problem-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.18);
 }
 
 .problem-icon {
