@@ -360,24 +360,68 @@ body {
             box-shadow: 0 0 0 3px rgba(44, 83, 100, 0.1);
         }
 
-        .calculate-btn {
-            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-            color: white;
-            padding: 18px 50px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 30px;
+            /* --- INICIO DA SUBSTITUIÇÃO --- */
+
+    /* Container para alinhar os botões lado a lado */
+    .form-actions {
+        display: flex;
+        gap: 15px; /* Espaço entre os botões */
+        margin-top: 30px;
+    }
+
+    /* Estilo do botão Limpar (Novo) */
+    .clear-btn {
+        background-color: white;
+        border: 2px solid #ccc;
+        color: #666;
+        padding: 18px 30px;
+        border-radius: 50px;
+        font-size: 1.1em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex: 1; /* Ocupa 1 parte do espaço (menor) */
+    }
+
+    .clear-btn:hover {
+        background-color: #f1f1f1;
+        border-color: #999;
+        color: #333;
+        transform: translateY(-3px);
+    }
+
+    /* Estilo do botão Calcular (Atualizado) */
+    .calculate-btn {
+        background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+        color: white;
+        padding: 18px 30px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex: 2; /* Ocupa 2 partes do espaço (maior, para dar destaque) */
+        /* Removemos o width: 100% e o margin-top antigo pois agora o .form-actions controla isso */
+    }
+
+    .calculate-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    /* Ajuste para Celular: Botões ficam um embaixo do outro */
+    @media (max-width: 600px) {
+        .form-actions {
+            flex-direction: column;
+        }
+        
+        .calculate-btn, .clear-btn {
             width: 100%;
         }
+    }
 
-        .calculate-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
+    /* --- FIM DA SUBSTITUIÇÃO --- */
 
         /* NOVA SEÇÃO: RESULTADOS */
         .results {
