@@ -21,7 +21,6 @@ body {
     top: 20px;
     left: 12%;
     transform: translateX(-50%);
-    z-index: 10;
 }
 
 .logo img {
@@ -65,8 +64,8 @@ body {
 }
 
 .hero h1 {
-    font-size: 5em;
-    margin-bottom: 20px;
+    font-size: 3.5em;
+    margin-bottom: center;
     animation: fadeInDown 1s ease;
 }
 
