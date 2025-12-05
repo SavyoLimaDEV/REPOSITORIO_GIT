@@ -32,9 +32,8 @@ body {
 
 .hero {
     color: white;
-    padding: 80px 20px;
+    padding: 40px 20px; 
     text-align: center;
-
     position: relative; 
     width: 100%;
     overflow: hidden;
