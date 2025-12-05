@@ -99,3 +99,24 @@ window.addEventListener('scroll', () => {
             document.getElementById('resultados').classList.add('active');
             document.getElementById('resultados').scrollIntoView({ behavior: 'smooth' });
         });
+
+        // --- Lógica do Botão Limpar ---
+        const btnLimpar = document.getElementById('btnLimpar');
+
+        if (btnLimpar) {
+        btnLimpar.addEventListener('click', function() {
+        // 1. Reseta os campos digitados
+        document.getElementById('planningForm').reset();
+
+        // 2. Reseta os textos dos resultados visualmente
+        document.getElementById('capitalGiro').textContent = 'R$ 0';
+        document.getElementById('pontoEquilibrio').textContent = 'R$ 0';
+        document.getElementById('lucroAnual').textContent = 'R$ 0';
+        
+        // (Opcional) Retira a cor vermelha/verde se tiver ficado
+        document.getElementById('lucroAnual').style.color = ''; 
+
+        // 3. Rola a tela de volta para o início do formulário
+        document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });
+    });
+}
