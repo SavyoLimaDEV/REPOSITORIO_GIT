@@ -25,18 +25,22 @@ body {
 }
 
 .logo img {
-    height: 25vw !important; /* usa largura da viewport */
+    height: clamp(120px, 22vw, 350px);
     width: auto !important;
     max-height: 375px !important;
     min-height: 100px !important;
 }
+
 .hero {
     color: white;
     padding: 80px 20px;
     text-align: center;
-    position: relative;  
-    overflow: hidden;  
+
+    position: relative; 
+    width: 100%;
+    overflow: hidden;
 }
+
 
 .hero::before {
     content: '';
@@ -64,9 +68,8 @@ body {
     font-size: 5em;
     margin-bottom: 20px;
     animation: fadeInDown 1s ease;
-    position: relative !important;  /* ← força posicionamento relativo */
-    transform: none !important;  /* ← remove qualquer transform após carregar */
 }
+
 
 .hero p {
     font-size: 1.3em;
@@ -111,10 +114,12 @@ body {
     width: 100%;
 }
 
-.cta-btn:hover {
+.cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
+
+
 
 .problems {
     padding: 80px 20px;
@@ -303,7 +308,7 @@ body {
         }
 
         .form-container {
-            max-width: 90000px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
             padding: 50px;
