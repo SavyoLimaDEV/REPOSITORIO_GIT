@@ -17,29 +17,30 @@ body {
 }
 
 .logo {
-            position: absolute;
-            top: 20px;
-            left: 12%;
-            transform: translateX(-50%);
-            z-index: 10;
-        }
+    position: absolute;
+    top: 20px;
+    left: 12%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
 
-        .logo img {
-            height: 400px;
-            width: auto;
-        }
-
+.logo img {
+    height: 25vw !important; /* usa largura da viewport */
+    width: auto !important;
+    max-height: 375px !important;
+    min-height: 100px !important;
+}
 .hero {
     color: white;
     padding: 80px 20px;
     text-align: center;
-    position: relative;  /* ← ADICIONE ESTA LINHA */
-    overflow: hidden;  /* ← E ESTA */
+    position: relative;  
+    overflow: hidden;  
 }
 
 .hero::before {
     content: '';
-    position: absolute;  /* ← ADICIONE ESTA LINHA */
+    position: absolute;  
     top: -50%;
     right: -50%;
     width: 200%;
@@ -97,19 +98,20 @@ body {
 }
 
 .cta-button {
-  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-  color: white;
-  padding: 18px 50px;
-  border: none;
-  border-radius: 50px;
-  font-size: 1.2em;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 30px;
-  width: 100%;
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    color: white;
+    padding: 18px 50px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;  
+    margin-top: 30px;
+    width: 100%;
 }
 
-.cta-button:hover {
+.cta-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
